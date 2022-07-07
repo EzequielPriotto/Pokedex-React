@@ -1,17 +1,23 @@
 import React from 'react';
-import './App.css';
-import ListOfPokemons from './components/ListOfPokemons';
+import './styles/App.css';
+import DetailsPokemon from './pages/DetailsPokemon/DetailsPokemon';
+import Home from './pages/Home/Home';
+import { Route } from 'wouter';
+import AboutMe from './pages/AboutMe/AboutMe';
+
+
 
 export default function App() {
-  
+
   return (
+    
     <div className="App">
       <section className="App-content">
-        <h1>POKEDEX TEST REACT</h1>
-        {
-          <ListOfPokemons></ListOfPokemons>
-        }
+        <Route component={Home} path="/" />
+        <Route component={DetailsPokemon} path="/pokemon/:pokemonName" />
+        <Route component={AboutMe} path="/AboutMe"/>
       </section>
     </div>
+
   );
 }
