@@ -5,5 +5,6 @@ export default async function getTypes(){
     const res = await fetch(URL);
     const response = await res.json();
     const types = await response.results.map(type=> type.name)
+    
     return types
 }
