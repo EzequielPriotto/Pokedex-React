@@ -1,4 +1,4 @@
-const URL = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+const URL = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
 
 export default async function getPokemons() {
 

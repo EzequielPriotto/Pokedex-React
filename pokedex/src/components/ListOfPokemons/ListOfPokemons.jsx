@@ -3,6 +3,9 @@ import PokemonCard from "../PokemonCard/PokemonCard";
 import getPokemons from '../../services/getPokemons';
 import Loader from '../Loader/Loader';
 
+import './ListOfPokemons.css'
+
+
 export default function ListOfPokemons() {
 
   const [pokemons, setPokemons] = useState([])
@@ -17,7 +20,7 @@ export default function ListOfPokemons() {
   }, [])
 
   return (
-    <div>
+    <div className='listPokemons'>
       <Loader loading={isLoading} />
       {
         pokemons.map(pokemon => {

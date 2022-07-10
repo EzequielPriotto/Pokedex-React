@@ -1,0 +1,12 @@
+
+.listPokemons{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    
+    margin: 10px 2rem;
+    gap: 3rem;
+}
+h4{
+    margin-top: 0;
+}
