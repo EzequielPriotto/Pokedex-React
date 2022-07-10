@@ -1,0 +1,31 @@
+@font-face {
+    font-family: tittleHollow;
+    src: url(../../../public/assets/fonts/tittleHollow.ttf);
+}
+@font-face {
+    font-family: tittleSolid;
+    src: url(../../../public/assets/fonts/tittleSolid.ttf);
+}
+@font-face {
+    font-family: textDefault;
+    src: url(../../../public/assets/fonts/textDefault.ttf);
+}
+
+*{
+    font-family: 'textDefault';
+    font-size: 0.8rem;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'tittleSolid';
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+    color: #fbcc1f;
+    text-shadow: 0 4px 3px black;
+    margin-bottom: 5px;
+}

@@ -1,8 +1,9 @@
-const URL = "https://pokeapi.co/api/v2/pokemon?limit=1050&offset=0";
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 
-export default async function getPokemons() {
+export default async function getPokemons({limit = 24, page = 0} = {}) {
 
-    const res = await fetch(URL);
+    const url = `${BASE_URL}?limit=${limit}&offset=${limit * page}`;
+    const res = await fetch(url);
     const response = await res.json();
     const pokemons = await Promise.all(
         response.results.map(pokemon => 

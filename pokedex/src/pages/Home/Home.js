@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'wouter';
-import ListOfPokemons from '../../components/ListOfPokemons/ListOfPokemons'
-
+import { useLocation } from 'wouter';
+import ListOfPokemons from 'components/ListOfPokemons/ListOfPokemons'
+import './Home.css'
 export default function Home() {
   const [pokeName, setPokeName] = useState();
   const [path, pushLocation] = useLocation();
@@ -18,11 +18,13 @@ export default function Home() {
   return (
     <React.Fragment>
 
-      <h1>POKEDEX TEST REACT</h1>
-
-      <form onSubmit={shearch}>
-        <input placeholder='Search a pokemon...' onChange={handleInput} type="text" value={pokeName} />
-      </form>
+      <header >
+        <h1>POKEDEX TEST REACT</h1>
+        <form onSubmit={shearch}>
+          <input placeholder='Search a pokemon...' onChange={handleInput} type="text" value={pokeName} />
+        </form>
+        
+      </header>
 
       <ListOfPokemons></ListOfPokemons>
 

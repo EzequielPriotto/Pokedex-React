@@ -8,9 +8,6 @@ import AboutMe from './pages/AboutMe/AboutMe';
 
 import { Route } from 'wouter';
 
-import Missigno from './pages/Missigno/Missigno';
-
-
 
 export default function App() {
 

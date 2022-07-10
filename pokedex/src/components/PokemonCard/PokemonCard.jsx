@@ -15,4 +15,6 @@ export default function PokemonCard({ pokemon }) {
         </div>
     )
 
+  
+
 }

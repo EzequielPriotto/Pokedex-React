@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import PokemonCard from "../PokemonCard/PokemonCard";
-import getPokemons from '../../services/getPokemons';
-import Loader from '../Loader/Loader';
+import React from 'react';
+import PokemonCard from "components/PokemonCard/PokemonCard";
+import Loader from 'components/Loader/Loader';
 
 import './ListOfPokemons.css'
+
+import usePokemons from 'hooks/usePokemons';
 
 
 export default function ListOfPokemons() {
 
-  const [pokemons, setPokemons] = useState([])
-  const [isLoading, setLoading] = useState(false)
-
-  useEffect(() => {
-    setLoading(true)
-    getPokemons().then(pokemonsAPI => {
-      setPokemons(pokemonsAPI)
-      setLoading(false)
-    })
-  }, [])
+  const {pokemons, isLoading} = usePokemons();
 
   return (
     <div className='listPokemons'>
